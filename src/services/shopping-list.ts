@@ -6,6 +6,10 @@ export class ShoppingListService {
     }
     addItems(items: Ingredient[]){
         this.ingredients.push(...items);
+        /* 
+            this.ingredients.push(items); --> [1,2,3,[4,5]]
+            this.ingredients.push(...items); --> [1,2,3,4,5]
+        */
     }
     getItems() {
         return this.ingredients.slice();
